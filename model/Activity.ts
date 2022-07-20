@@ -4,14 +4,15 @@ import { Student } from "./Student";
 export abstract class Activity {
     private activityName:string;
     private activityDate:Date;
-    private activityDetail:string;
-    private students:Student[];
-    private moderators:Moderator [];
-    private isTheActive:boolean;
+    private activityDetail!:string;
+    private students:Array<Student> = [];
+    private moderators:Array<Moderator> = [];
+    private isTheActive!:boolean;
 
     constructor(activityName:string,activityDate:Date,activityType:string) {
         this.activityName=activityName;
         this.activityDate=activityDate;
+      
           
     }
 
@@ -54,6 +55,8 @@ export abstract class Activity {
     set IsTheActive(isTheActive:boolean){
         this.isTheActive=isTheActive;
     }
+
+   // abstract displayAllActivity():void;
     
     
     abstract getActivityType():string;

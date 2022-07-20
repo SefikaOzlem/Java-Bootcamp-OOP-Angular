@@ -1,6 +1,6 @@
 export class Sponsor{
     private sponsorName:string;
-    private sponsorDetail:string;
+    private sponsorDetail!:string;
 
     constructor(sponsorName:string) {
         this.sponsorName=sponsorName;

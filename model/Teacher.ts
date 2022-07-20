@@ -4,8 +4,8 @@ import { Activity } from "./Activity";
 export class Teacher extends Person{
     private specialty :string;
 
-    constructor(name:string,surname:string,phoneNumber:string,email:string,activity:Activity[], specialty:string){
-        super(name,surname,phoneNumber,email,activity);
+    constructor(name:string,surname:string,phoneNumber:string,email:string, specialty:string){
+        super(name,surname,phoneNumber,email);
         this.specialty=specialty;
      }
 

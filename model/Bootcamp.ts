@@ -2,9 +2,9 @@ import { Activity } from "./Activity";
 import {Sponsor} from "./Sponsor";
 import { Teacher } from "./Teacher";
 
-class Bootcamp extends Activity{
+export class Bootcamp extends Activity{
    
-    private teachers: Teacher [];
+    private teachers: Array<Teacher> = [];
     private sponsor: Sponsor;
     
     constructor(activityName:string,activityDate:Date,activityType:string,sponsor:Sponsor) {

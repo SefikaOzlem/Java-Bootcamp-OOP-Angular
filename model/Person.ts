@@ -5,14 +5,14 @@ export abstract class Person{
     private surname: string;
     private phoneNumber: string;
     private email: string;  
-    private activities: Activity[];
+  //  private activities: Activity[];
 
-    constructor(name:string,surname:string,phoneNumber:string,email:string,activity:Activity[]) {
+    constructor(name:string,surname:string,phoneNumber:string,email:string) {
         this.name=name;
         this.surname=surname;
         this.phoneNumber=phoneNumber;
         this.email=email;
-        this.activities=activity;
+       // this.activities=activity;
     }
 
     get Name():string{

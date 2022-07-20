@@ -4,7 +4,7 @@ import { Sponsor } from "./Sponsor";
 
 class Hackhaton extends Activity{
     
-    private mentors: Mentor [];
+    private mentors: Array<Mentor> = [];
     private sponsor: Sponsor;
     
     constructor(activityName:string,activityDate:Date,activityType:string,sponsor:Sponsor) {
