@@ -1,10 +1,13 @@
+import { Moderator } from './Moderator';
+import { Student } from "./Student";
+
 export abstract class Activity {
     private activityName:string;
     private activityDate:Date;
     private activityDetail:string;
-   // private students:Student list
-   // private moderators:Moderator list:
-   private isTheActive:boolean;
+    private students:Student[];
+    private moderators:Moderator [];
+    private isTheActive:boolean;
 
     constructor(activityName:string,activityDate:Date,activityType:string) {
         this.activityName=activityName;
@@ -30,13 +33,28 @@ export abstract class Activity {
     set ActivityDetail(activityDetail:string){
         this.activityDetail=activityDetail;
     }
+    get Students():Student[]{
+        return this.students;
+    }
+    addStudents(student:Student)
+    {
+       this.students.push(student);
+    }
+    get Moderators():Moderator[]{
+        return this.moderators;
+    }
+    addModerators(moderator:Moderator)
+    {
+       this.moderators.push(moderator);
+    }
+
     get IsTheActive():boolean{
         return this.isTheActive;
     }
     set IsTheActive(isTheActive:boolean){
         this.isTheActive=isTheActive;
     }
-    //get,set student ,moderator
+    
     
     abstract getActivityType():string;
 

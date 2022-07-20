@@ -1,7 +1,7 @@
 import { Activity } from "./Activity";
 import { Person } from "./Person";
 
-class Student extends Person{
+export class Student extends Person{
 
     private studentNumber:string;
 

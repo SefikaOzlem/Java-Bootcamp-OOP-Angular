@@ -1,7 +1,7 @@
 import { Person } from "./Person";
 import { Activity } from "./Activity";
 
-class Teacher extends Person{
+export class Teacher extends Person{
     private specialty :string;
 
     constructor(name:string,surname:string,phoneNumber:string,email:string,activity:Activity[], specialty:string){
