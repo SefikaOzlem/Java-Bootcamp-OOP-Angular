@@ -4,11 +4,12 @@ import { Sponsor } from "./Sponsor";
 
 class Hackhaton extends Activity{
     
+    
     private mentors: Array<Mentor> = [];
     private sponsor: Sponsor;
     
-    constructor(activityName:string,activityDate:Date,activityType:string,sponsor:Sponsor) {
-        super(activityName,activityDate,activityType);
+    constructor(activityName:string,activityDate:Date,activityStatus:string,sponsor:Sponsor) {
+        super(activityName,activityDate,activityStatus);
         this.sponsor=sponsor;
     }
     get Mentors():Mentor[]{
@@ -30,5 +31,5 @@ class Hackhaton extends Activity{
     getActivityType(): string {
         return 'Hackhaton';
     }
-  
+   
 }

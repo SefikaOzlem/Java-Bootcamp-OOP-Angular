@@ -8,11 +8,12 @@ export abstract class Activity {
     private students:Array<Student> = [];
     private moderators:Array<Moderator> = [];
     private isTheActive!:boolean;
+    private activityStatus:string; // online or yerinde eğitim
 
-    constructor(activityName:string,activityDate:Date,activityType:string) {
+    constructor(activityName:string,activityDate:Date,activityStatus:string) {
         this.activityName=activityName;
         this.activityDate=activityDate;
-      
+        this.activityStatus=activityStatus;
           
     }
 
@@ -27,6 +28,12 @@ export abstract class Activity {
     }
     set ActivityDate(activityDate:Date){
         this.activityDate=activityDate;
+    }
+    get ActivityStatus():string{
+        return this.activityStatus;
+    }
+    set ActivityStatus(activityStatus:string){
+        this.activityStatus=activityStatus;
     }
     get ActivityDetail():string{
         return this.activityDetail;
@@ -55,8 +62,6 @@ export abstract class Activity {
     set IsTheActive(isTheActive:boolean){
         this.isTheActive=isTheActive;
     }
-
-   // abstract displayAllActivity():void;
     
     
     abstract getActivityType():string;

@@ -4,11 +4,12 @@ import { Teacher } from "./Teacher";
 
 export class Bootcamp extends Activity{
    
+   
     private teachers: Array<Teacher> = [];
     private sponsor: Sponsor;
     
-    constructor(activityName:string,activityDate:Date,activityType:string,sponsor:Sponsor) {
-        super(activityName,activityDate,activityType);
+    constructor(activityName:string,activityDate:Date,activityStatus:string,sponsor:Sponsor) {
+        super(activityName,activityDate,activityStatus);
         this.sponsor=sponsor;
     }
 
@@ -31,5 +32,5 @@ export class Bootcamp extends Activity{
         return 'Bootcamp';
      }
 
-   
+    
 }
