@@ -6,49 +6,34 @@ import { Activity } from '../model/Activity';
 
 const activities:Array<Activity> = [];
 
-function displayAllActivities(activity:Activity[]){
-    for (var i = 0; i < activity.length; i++) {
-        if(activity[i]!=undefined){
-             console.log(activity[i].ActivityName +" - "+activity[i].ActivityStatus + " - "+activity[i].ActivityDate.toLocaleDateString()); 
-        }
-     }
-}
-
-function deleteActivity(removeActivityName:string,activities:Activity[]){
-    
-    for (var i = 0; i < activities.length; i++) {
-        if(activities[i].ActivityName==removeActivityName){
-           delete activities[i]; 
-        }
-     }
-}
-
-let sponsor = new Sponsor("AKSİgorta "); 
-const date = new Date('2022-06-28');
-var bootcamp=new Bootcamp("Java Angular Bootcamp",date,"Online",sponsor);
-bootcamp.IsTheActive=true;
+let sponsor = new Sponsor("AKSİgorta "); //New sponsor identified 
+const date = new Date('2022-06-28');//New Date identified
+var bootcamp=new Bootcamp("Java Angular Bootcamp",date,"Online",sponsor);//Object defined with bootcamp constructor
+bootcamp.IsTheActive=true; //Bootcamp in active
 //console.log("Activity Status: "+bootcamp.ActivityStatus);
-bootcamp.ActivityDetail="Java & Angular Bootcamp 45 hours online education with teachers";
+bootcamp.ActivityDetail="Java & Angular Bootcamp 45 hours online education with teachers";//Bootcamp details defined
 //console.log(bootcamp.getActivityType());
 
-
-var studentOne=new Student("Özlem","PUL","5079682541","ozlem@gmail.com","201751001");
+/*New students identified */
+var studentOne=new Student("Özlem","PUL","5079682541","ozlem@gmail.com","201751001","Dokuz Eylül Univercity");
 bootcamp.addStudents(studentOne);
-var studentTwo=new Student("Ayşe Nur","Bilge","50521653","aysenur@gmail.com","201751002");
+var studentTwo=new Student("Ayşe Nur","Bilge","50521653","aysenur@gmail.com","201751002","İstanbul Gelişim Univercity");
 bootcamp.addStudents(studentTwo);
 
 
+
+/*New moderator identified */
 var moderator=new Moderator("Murat Tevfik","Yağlıcı","5079632514","tevfik@gmail.com");
 bootcamp.addModerators(moderator);
 //console.log(bootcamp.Students);
-activities.push(bootcamp);
+activities.push(bootcamp);//Added to activity
 //console.log(bootcamp.Moderators);
 deleteActivity("Java Angular Bootcamp",activities);
 
-
+/*New bootcamps identified */
 var bootcampTwo=new Bootcamp("SpirngBoot Bootcamp",date,"In Ofise",sponsor);
 bootcampTwo.addStudents(studentTwo);
-activities.push(bootcampTwo);
+activities.push(bootcampTwo);//Added to activity
 //console.log(bootcampTwo.Students);
 //console.log(bootcampTwo);
 //console.log(activities[0].Students);
