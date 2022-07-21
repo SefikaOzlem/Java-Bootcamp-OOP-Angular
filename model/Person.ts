@@ -12,7 +12,7 @@ export abstract class Person{
     private surname: string;
     private phoneNumber: string;
     private email: string;  
-    private activity: Activity;
+    private activity!: Activity;
 
     constructor(name:string,surname:string,phoneNumber:string,email:string) {
         this.name=name;
@@ -21,18 +21,18 @@ export abstract class Person{
         this.email=email;
     }
 
-    addBootcamp(activityName:string,activityDate:Date,activityStatus:string,sponsor:Sponsor):Activity{
-        this.activity= new Bootcamp(activityName,activityDate,activityStatus,sponsor);
+    addBootcamp(activityName:string,activityStartDate:Date,activityFinishDate:Date,activityStatus:string,sponsor:Sponsor):Activity{
+        this.activity= new Bootcamp(activityName,activityStartDate,activityFinishDate,activityStatus,sponsor);
         return this.activity;
     }
 
-    addHackhaton(activityName:string,activityDate:Date,activityStatus:string,sponsor:Sponsor):Activity{
-        this.activity= new Hackhaton(activityName,activityDate,activityStatus,sponsor);
+    addHackhaton(activityName:string,activityStartDate:Date,activityFinishDate:Date,activityStatus:string,sponsor:Sponsor):Activity{
+        this.activity= new Hackhaton(activityName,activityStartDate,activityFinishDate,activityStatus,sponsor);
         return this.activity;
     }
 
-    addInHouseEducation(activityName:string,activityDate:Date,activityStatus:string,companyName:string,department:Department):Activity{
-        this.activity= new InHouseEducation(activityName,activityDate,activityStatus,companyName,department);
+    addInHouseEducation(activityName:string,activityStartDate:Date,activityFinishDate:Date,activityStatus:string,companyName:string,department:Department):Activity{
+        this.activity= new InHouseEducation(activityName,activityStartDate,activityFinishDate,activityStatus,companyName,department);
         return this.activity;
     }
 

@@ -8,14 +8,14 @@ export class Hackhaton extends Activity{
     private mentors: Array<Mentor> = [];
     private sponsor: Sponsor;
     
-    constructor(activityName:string,activityDate:Date,activityStatus:string,sponsor:Sponsor) {
-        super(activityName,activityDate,activityStatus);
+    constructor(activityName:string,activityStartDate:Date,activityFinishDate:Date,activityStatus:string,sponsor:Sponsor) {
+        super(activityName,activityStartDate,activityFinishDate,activityStatus);
         this.sponsor=sponsor;
     }
     get Mentors():Mentor[]{
         return this.mentors
     }
-    addMentors(mentor:Mentor)
+    addMentors(mentor:Mentor)  // add mentor to Hackhaton activity
     {
        this.mentors.push(mentor);
     }

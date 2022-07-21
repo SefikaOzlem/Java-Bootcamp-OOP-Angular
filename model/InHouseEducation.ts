@@ -7,8 +7,8 @@ export class InHouseEducation extends Activity{
     private companyName:string;
     private department:Department;
 
-    constructor(activityName:string,activityDate:Date,activityStatus:string,companyName:string,department:Department) {
-        super(activityName,activityDate,activityStatus);
+    constructor(activityName:string,activityStartDate:Date,activityFinishDate:Date,activityStatus:string,companyName:string,department:Department) {
+        super(activityName,activityStartDate,activityFinishDate,activityStatus);
         this.companyName=companyName;
         this.department=department;
     }

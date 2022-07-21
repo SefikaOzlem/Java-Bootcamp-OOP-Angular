@@ -8,15 +8,17 @@ export class Bootcamp extends Activity{
     private teachers: Array<Teacher> = [];
     private sponsor: Sponsor;
     
-    constructor(activityName:string,activityDate:Date,activityStatus:string,sponsor:Sponsor) {
-        super(activityName,activityDate,activityStatus);
+    constructor(activityName:string,activityStartDate:Date,activityFinishDate:Date,activityStatus:string,sponsor:Sponsor) {
+        super(activityName,activityStartDate,activityFinishDate,activityStatus);
         this.sponsor=sponsor;
+
     }
 
     get Teachers():Teacher[]{
         return this.teachers;
     }
-    addTeachers(teacher:Teacher)
+
+   addTeachers(teacher:Teacher)
     {
        this.teachers.push(teacher);
     }
