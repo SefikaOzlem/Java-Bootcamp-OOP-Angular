@@ -1,4 +1,3 @@
-import { Activity } from "./Activity";
 import { Person } from "./Person";
 
 export class Student extends Person{

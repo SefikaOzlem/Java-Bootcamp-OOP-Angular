@@ -1,5 +1,4 @@
 import { Person } from "./Person";
-import { Activity } from "./Activity";
 
 export class Teacher extends Person{
     private specialty :string;

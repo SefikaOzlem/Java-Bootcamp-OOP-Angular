@@ -1,18 +1,39 @@
+import { Student } from './Student';
 import { Activity } from "./Activity";
+import { Moderator } from "./Moderator";
+import { Bootcamp } from './Bootcamp';
+import { Sponsor } from './Sponsor';
+import { Hackhaton } from './Hackhaton';
+import { InHouseEducation } from './InHouseEducation';
+import { Department } from './Department';
 
 export abstract class Person{
     private name: string;
     private surname: string;
     private phoneNumber: string;
     private email: string;  
-  //  private activities: Activity[];
+    private activity: Activity;
 
     constructor(name:string,surname:string,phoneNumber:string,email:string) {
         this.name=name;
         this.surname=surname;
         this.phoneNumber=phoneNumber;
         this.email=email;
-       // this.activities=activity;
+    }
+
+    addBootcamp(activityName:string,activityDate:Date,activityStatus:string,sponsor:Sponsor):Activity{
+        this.activity= new Bootcamp(activityName,activityDate,activityStatus,sponsor);
+        return this.activity;
+    }
+
+    addHackhaton(activityName:string,activityDate:Date,activityStatus:string,sponsor:Sponsor):Activity{
+        this.activity= new Hackhaton(activityName,activityDate,activityStatus,sponsor);
+        return this.activity;
+    }
+
+    addInHouseEducation(activityName:string,activityDate:Date,activityStatus:string,companyName:string,department:Department):Activity{
+        this.activity= new InHouseEducation(activityName,activityDate,activityStatus,companyName,department);
+        return this.activity;
     }
 
     get Name():string{

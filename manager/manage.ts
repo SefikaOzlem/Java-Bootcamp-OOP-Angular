@@ -34,7 +34,7 @@ bootcamp.ActivityDetail="Java & Angular Bootcamp 45 hours online education with 
 
 var studentOne=new Student("Özlem","PUL","5079682541","ozlem@gmail.com","201751001");
 bootcamp.addStudents(studentOne);
-var studentTwo=new Student("Ayşenur","Bilge","50521653","aysenur@gmail.com","201751002");
+var studentTwo=new Student("Ayşe Nur","Bilge","50521653","aysenur@gmail.com","201751002");
 bootcamp.addStudents(studentTwo);
 
 

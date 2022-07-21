@@ -2,7 +2,7 @@ import { Activity } from "./Activity";
 import { Mentor } from "./Mentor";
 import { Sponsor } from "./Sponsor";
 
-class Hackhaton extends Activity{
+export class Hackhaton extends Activity{
     
     
     private mentors: Array<Mentor> = [];

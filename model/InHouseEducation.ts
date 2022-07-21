@@ -1,7 +1,7 @@
 import { Department } from './Department';
 import { Activity } from "./Activity";
 
-class InHouseEducation extends Activity{
+export class InHouseEducation extends Activity{
     
    
     private companyName:string;
